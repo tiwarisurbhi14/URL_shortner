@@ -1,9 +1,6 @@
 import express from "express";
 import { createShortUrl } from "../controller/shortUrl.controller.js";
-const router=express.Router();
+const router = express.Router();
 
-router.post("/api/create",createShortUrl);
-
-
-
+router.post("/", createShortUrl);
 export default router;
