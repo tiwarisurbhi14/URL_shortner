@@ -20,7 +20,6 @@ app.use(cors({
     credentials: true 
 }));
 app.use(express.urlencoded({extended:true}));
-const id=nanoid(5);
 app.use(cookieParser());
 
 app.use(attachUser);
