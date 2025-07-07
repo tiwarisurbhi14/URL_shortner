@@ -1,5 +1,4 @@
 import express from "express";
-import {nanoid} from "nanoid";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./src/config/mongo.config.js";
