@@ -1,4 +1,4 @@
-import UrlForm from "../components/urlForm";
+import UrlForm from "../components/UrlForm";
 
 const HomePage = () => {
   return (
