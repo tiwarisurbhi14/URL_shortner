@@ -13,16 +13,17 @@ const Navbar = () => {
   const userName = auth.user?.user.name.toUpperCase();
 
   const onLogout = () => {
-  dispatch(logout());        
-  navigate({ to: "/" });      
-};
+    dispatch(logout());
+    navigate({ to: "/" });
+  };
+
   return (
     <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-fuchsia-800 shadow-lg text-white backdrop-blur-md bg-opacity-90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <Link
-            to="/"
+            to="/dashboard"
             className="text-3xl font-extrabold tracking-wider bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 text-transparent bg-clip-text drop-shadow-lg hover:scale-105 transition-transform duration-300"
           >
             nanoURL
@@ -32,6 +33,12 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4 items-center">
             {isAuthenticated ? (
               <>
+                <Link
+                  to="/dashboard"
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-md text-sm font-semibold transition backdrop-blur-md shadow"
+                >
+                  Dashboard
+                </Link>
                 <span className="text-white/90 font-medium">
                   Welcome, <span className="font-bold">{userName}</span>
                 </span>
@@ -68,7 +75,15 @@ const Navbar = () => {
           <div className="md:hidden mt-2 space-y-2 pb-4">
             {isAuthenticated ? (
               <>
-                <span className="block text-white/90">Welcome, {userName}</span>
+                <Link
+                  to="/dashboard"
+                  className="block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-md text-sm font-semibold transition backdrop-blur-md shadow"
+                >
+                  Dashboard
+                </Link>
+                <span className="block text-white/90">
+                  Welcome, {userName}
+                </span>
                 <button
                   onClick={onLogout}
                   className="w-full bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-md text-sm font-semibold transition backdrop-blur-md shadow"
