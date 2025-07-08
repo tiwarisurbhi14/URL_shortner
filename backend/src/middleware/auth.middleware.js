@@ -3,6 +3,7 @@ import { verifyToken } from "../utils/helper.js";
 
 export const authMiddleware = async (req, res, next) => {
   const token = req.cookies.accessToken;
+  console.log("Token:", token);
   if (!token) {
     return res.status(401).json({ message: "Unauthorized" });
   }
