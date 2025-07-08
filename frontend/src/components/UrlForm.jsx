@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createShortUrl, updateShortUrl } from "../api/short_url.api";
 import { useSelector } from "react-redux";
 import { queryClient } from "../main";
+const BACKEND_BASE_URL = "https://url-shortner-backend-fytv.onrender.com";
 
 const UrlForm = () => {
   const [url, setUrl] = useState("");
