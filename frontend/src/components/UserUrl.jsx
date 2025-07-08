@@ -81,7 +81,7 @@ const UserUrl = () => {
                 <td className="px-6 py-4">
                   <div className="text-sm">
                     <a 
-                      href={`https://url-shortner-frontend-1vhd.onrender.com/${url.short_url}`} 
+                      href={`https://url-shortner-backend-fytv.onrender.com/${url.short_url}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-900 hover:underline"
