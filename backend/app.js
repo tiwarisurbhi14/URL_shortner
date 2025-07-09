@@ -13,6 +13,9 @@ dotenv.config("./.env");
 
 const app=express();
 app.use(express.json());
+const PORT = process.env.PORT || 3000;
+
+
 
 app.use(cors({
     origin: 'https://url-shortner-frontend-1vhd.onrender.com', 
@@ -29,7 +32,7 @@ app.get("/:id",redirectFromShortUrl);
 
 app.use(errorHandler);
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     connectDB();
     console.log('Server is running on port http://localhost:3000');
 })
