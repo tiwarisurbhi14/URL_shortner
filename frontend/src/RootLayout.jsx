@@ -2,7 +2,7 @@ import { Outlet } from '@tanstack/react-router'
 import Navbar from './components/Navbar'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { setUser, logout } from './store/authSlice'
+import { setUser, logout } from './store/slice/authSlice'
 import axios from 'axios'
 
 const RootLayout = () => {
