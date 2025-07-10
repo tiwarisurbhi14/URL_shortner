@@ -2,7 +2,7 @@ import { Outlet } from '@tanstack/react-router'
 import Navbar from './components/Navbar'
 
 
-const App = () => {
+const RootLayout = () => {
   return (
     <>
       <Navbar/>
@@ -11,4 +11,4 @@ const App = () => {
   )
 }
 
-export default App
+export default RootLayout

@@ -21,6 +21,7 @@ app.use(cors({
     origin: 'https://url-shortner-frontend-1vhd.onrender.com', 
     credentials: true 
 }));
+
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
