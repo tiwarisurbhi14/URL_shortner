@@ -10,12 +10,12 @@ const Navbar = () => {
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
   const isAuthenticated = auth.isAuthenticated;
-  const userName = auth.user?.user.name.toUpperCase();
+  const userName = auth.user?.name?.toUpperCase();
 
   const onLogout = () => {
-  dispatch(logout());        
-  navigate({ to: "/" });      
-};
+    dispatch(logout());
+    navigate({ to: "/" });
+  };
   return (
     <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-fuchsia-800 shadow-lg text-white backdrop-blur-md bg-opacity-90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
