@@ -1,7 +1,9 @@
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import axios from "axios";
-import { setUser, logout } from "./store/slice/authSlice";
+import { Outlet } from '@tanstack/react-router'
+import Navbar from './components/Navbar'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setUser, logout } from './store/authSlice'
+import axios from 'axios'
 
 const RootLayout = () => {
   const dispatch = useDispatch();
@@ -21,11 +23,13 @@ const RootLayout = () => {
 
     fetchUser();
   }, [dispatch]);
-
   return (
+
     <>
-      <Navbar />
-      <Outlet />
+      <Navbar/>
+      <Outlet/>
     </>
-  );
-};
+  )
+}
+
+export default RootLayout
