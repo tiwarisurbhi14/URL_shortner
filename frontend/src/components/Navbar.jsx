@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
   const isAuthenticated = auth.isAuthenticated;
-  const userName = auth.user?.name?.toUpperCase();
+  const userName = auth.user?.user?.name?.toUpperCase();
 
   const onLogout = () => {
     dispatch(logout());
