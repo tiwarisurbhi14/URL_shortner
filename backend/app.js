@@ -15,8 +15,6 @@ const app=express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
-
-
 app.use(cors({
     origin: 'https://url-shortner-frontend-1vhd.onrender.com', 
     credentials: true 
